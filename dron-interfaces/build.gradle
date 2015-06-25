@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+group 'com.dron'
+version '05.03.15'
+jar {
+    baseName = 'dron-interfaces'
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+	dirs '../libs/'
+    }
+}
+
+dependencies {
+	compile("com.fasterxml.jackson.core:jackson-databind:2.4.4")
+	compile('org.springframework:spring-web:4.0.3.RELEASE')
+	compile("org.apache.commons:commons-lang3:3.0")
+	compile("n1.flotsam:xeger:1.0-SNAPSHOT")
+	compile("dk.brics:automaton:1.11")
+}

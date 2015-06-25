@@ -1,0 +1,27 @@
+{
+  "plugins" : [ {
+    "headers" : {
+      "Content-Type" : [ "application/json" ],
+      "Accept" : [ "application/json" ]
+    },
+    "httpMethod" : "POST",
+    "url" : "{{url}}:{{orderPort}}/order-api/rest/v2/order/CONFIRM_FRAUD",
+    "postBody" : "{ \"orderId\":{{orderId}} }",
+    "name" : null,
+    "responce" : null,
+    "futureParams" : [ ]
+  } ],
+  "params" : [ {
+    "key" : "{{orderId}}",
+    "value" : "220584167",
+    "array" : false
+  }, {
+    "key" : "{{url}}",
+    "value" : "http://localhost",
+    "array" : false
+  }, {
+    "key" : "{{orderPort}}",
+    "value" : "8090",
+    "array" : false
+  } ]
+}

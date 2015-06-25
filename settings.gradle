@@ -1,0 +1,4 @@
+include 'dron', 'dron-interfaces', 'dron-standalone'
+project(':dron').name='dron'
+project(':dron-interfaces').name='dron-interfaces'
+project(':dron-standalone').name='dron-standalone'

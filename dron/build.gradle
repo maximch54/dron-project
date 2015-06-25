@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+group = 'com.dron'
+version = '05.03.15'
+
+jar {
+    baseName = 'dron-service'
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	flatDir {
+		dirs '../libs/'
+	}
+}
+
+dependencies {
+    	compile("com.fasterxml.jackson.core:jackson-databind:2.4.4")
+	compile("org.springframework:spring-web:4.0.3.RELEASE")
+	compile project(':dron-interfaces')
+        compile("n1.flotsam:xeger:1.0-SNAPSHOT")
+        compile("dk.brics:automaton:1.11")
+	compile('junit:junit:4.11')
+	compile('org.easytesting:fest-assert:1.4')
+}

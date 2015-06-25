@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin : 'application'
+
+
+group = 'com.dron'
+version = '05.03.15'
+mainClassName = "com.dron.sender.MainApp"
+
+jar {
+	baseName = 'dron-standalone'
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	flatDir {
+		dirs '../libs'
+	}
+}
+
+dependencies {
+	compile("org.springframework:spring-web:4.0.3.RELEASE")
+	compile("com.fasterxml.jackson.core:jackson-databind:2.4.4")
+	compile("org.codehaus.jackson:jackson-mapper-asl:1.5.0")
+	compile project(':dron-interfaces')
+	compile project(':dron')
+	compile("org.apache.commons:commons-lang3:3.0")
+        compile("n1.flotsam:xeger:1.0-SNAPSHOT")
+        compile("dk.brics:automaton:1.11")
+	compile("org.controlsfx:controlsfx:8.20.8")
+}

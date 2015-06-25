@@ -1,0 +1,12 @@
+{
+  "plugins" : [ {
+    "headers" : {},
+    "httpMethod" : "GET",
+    "url" : "http://ip.jsontest.com/",
+    "postBody" : "",
+    "name" : null,
+    "responce" : null,
+    "futureParams" : [ ]
+  } ],
+  "params" : [ ]
+}
